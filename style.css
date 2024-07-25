@@ -1,0 +1,96 @@
+.divImg {
+    width: 6em;
+    height: 6em;
+    object-fit: cover;
+}
+
+/* xs screens */
+@media (max-width: 576px) {
+    .divImg {
+        width: 3rem;
+        height: 4rem;
+    }
+    .txt {
+        font-weight: normal;
+        font-size: smaller;
+    }
+}
+
+/* sm screens */
+@media (min-width: 576px) and (max-width: 767px) {
+    .divImg {
+        width: 3rem;
+        height: 4rem;
+    }
+
+
+    .txt {
+        font-weight: small;
+        font-size:smaller;
+    }
+}
+
+/* md screens */
+@media (min-width: 768px) and (max-width: 991px) {
+    .divImg {
+        width: 3rem;
+        height: 4rem;
+    }
+
+    .txt {
+        font-weight: normal;
+        font-size: smaller;
+    }
+}
+
+/* lg screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .divImg {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .txt {
+        font-weight: normal;
+        font-size: smaller;
+    }
+}
+
+/* xl screens */
+@media (min-width: 1200px) {
+    .divImg {
+        width: 4rem;
+        height: 6rem;
+    }
+
+    .txt {
+        font-weight: normal;
+        font-size: medium;
+    }
+}
+
+#dropdownInput {
+    width: 400px;
+}
+
+#dropdownMenu {
+    max-height: 200px;
+    width: 400px;
+    overflow-y: auto;
+}
+
+#areaSection {
+    background-color: #fde144;
+}
+
+.category {
+    background-color: rgb(46, 45, 45);
+    max-height: 180px;
+    overflow-y: auto;
+    margin-right: 0;
+}
+
+.items {
+    max-height: 700px;
+    overflow-y: auto;
+}
