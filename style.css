@@ -1,3 +1,7 @@
+.container-fluid {
+    padding-right: 0;
+}
+
 .divImg {
     width: 6em;
     height: 6em;
@@ -70,12 +74,12 @@
 }
 
 #dropdownInput {
-    width: 400px;
+    width: 350px;
 }
 
 #dropdownMenu {
     max-height: 200px;
-    width: 400px;
+    width: 350px;
     overflow-y: auto;
 }
 
