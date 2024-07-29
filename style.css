@@ -98,3 +98,56 @@
     max-height: 700px;
     overflow-y: auto;
 }
+
+
+/* Right Section styles */
+.nav .nav-link {
+    border-radius: 0;
+  }
+
+  .search {
+    border-radius: 1rem;
+    width: 20vw;
+    margin-bottom: 4px;
+  }
+
+  .table-container {
+    height: 36vh;
+    overflow-y: auto;
+  }
+  .bill-section {
+    margin-top: 0;
+    height: 30vh; 
+    overflow: hidden;
+  }
+
+  hr {
+    margin-top: 0;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 0;
+  }
+  .sharp-line {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+  .btn-chocolate {
+    background-color: #572f05;
+    color: white;
+  }
+
+  .text-area {
+    border-radius: 0;
+  }
+
+  .flex-fill {
+    border-radius: 0;
+  }
+  .text-area textarea {
+    border-radius: 0;
+  }
+
+  .hidden{
+    display:none;
+  }

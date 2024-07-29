@@ -14,7 +14,7 @@
 
 <body class="m-0 p-0">
 
-    <div class="row container-fluid">
+    <div class="row container-fluid m-0 p-0">
 
         <!--===================================== LEFT SECTION =====================================-->
         <div class="col-md-7">
@@ -28,30 +28,29 @@
                 <div class="col dropdown">
                     <input type="text" autocomplete="off" id="dropdownInput" onkeyup="filterDropdownItems()"
                         class="form-control form-select" placeholder="Select an option...">
-                    <div class="dropdown-menu" id="dropdownMenu">
-                        <option data-price="200" value="Chicken Tikka (Full)" class="dropdown-item">Chicken Tikka Full
-                            (&#8377; 200)</option>
-                        <option value="Butter Chicken Full" class="dropdown-item">Butter Chicken Full (&#8377; 250)
+                    <div class="dropdown-menu" id="dropdownMenu">   `
+                        <option isVar="false" category-id="1" data-price="200" value="Chicken Tikka (Full)" class="dropdown-item">Chicken Tikka Full (&#8377; 200)</option>
+                        <option isVar="false" category-id="2" data-price="250" value="Butter Chicken (Full)" class="dropdown-item">Butter Chicken Full (&#8377; 250)
                         </option>
-                        <option value="Chicken Chilly Full" class="dropdown-item">Chicken Chilly Full (&#8377; 230)
+                        <option isVar="false" category-id="3" data-price="230" value="Chicken Chilly Full" class="dropdown-item">Chicken Chilly Full (&#8377; 230)
                         </option>
-                        <option value="Chicken Tikka (Half)" class="dropdown-item">Chicken Tikka (Half) (&#8377; 200)
+                        <option isVar="false" category-id="4" data-price="200" value="Chicken Tikka (Half)" class="dropdown-item">Chicken Tikka (Half) (&#8377; 200)
                         </option>
-                        <option value="Chicken Chilly Half" class="dropdown-item">Chicken Chilly Half (&#8377; 150)
+                        <option isVar="false" category-id="5" data-price="150" value="Chicken Chilly Half" class="dropdown-item">Chicken Chilly Half (&#8377; 150)
                         </option>
-                        <option value="Chicken Kanti Full" class="dropdown-item">Chicken Kanti Full (&#8377; 350)
+                        <option isVar="false" category-id="6" data-price="350" value="Chicken Kanti Full" class="dropdown-item">Chicken Kanti Full (&#8377; 350)
                         </option>
-                        <option value="Chicken Kanti Half" class="dropdown-item">Chicken Kanti Half (&#8377; 450)
+                        <option isVar="false" category-id="7" data-price="450" value="Chicken Kanti Half" class="dropdown-item">Chicken Kanti Half (&#8377; 450)
                         </option>
-                        <option value="Chicken Chowmein" class="dropdown-item">Chicken Chowmein (&#8377; 150)</option>
-                        <option value="Chocolate Cake" class="dropdown-item">Chocolate Cake (&#8377; 250)</option>
-                        <option value="Strawberry Cheesecake" class="dropdown-item">Strawberry Cheesecake (&#8377; 450)
+                        <option isVar="false" category-id="8" data-price="150" value="Chicken Chowmein" class="dropdown-item">Chicken Chowmein (&#8377; 150)</option>
+                        <option isVar="false" category-id="9" data-price="250" value="Chocolate Cake" class="dropdown-item">Chocolate Cake (&#8377; 250)</option>
+                        <option isVar="false" category-id="10" data-price="450" value="Strawberry Cheesecake" class="dropdown-item">Strawberry Cheesecake (&#8377; 450)
                         </option>
-                        <option value="Chocolate Cheesecake" class="dropdown-item">Chocolate Cheesecake (&#8377; 350)
+                        <option isVar="false" category-id="11" data-price="350" value="Chocolate Cheesecake" class="dropdown-item">Chocolate Cheesecake (&#8377; 350)
                         </option>
-                        <option value="Chocolate Ice Cream" class="dropdown-item">Chocolate Ice Cream (&#8377; 150)
+                        <option isVar="false" category-id="12" data-price="150" value="Chocolate Ice Cream" class="dropdown-item">Chocolate Ice Cream (&#8377; 150)
                         </option>
-                        <option value="Chewy Brownies" class="dropdown-item">Chewy Brownies (&#8377; 350)</option>
+                        <option isVar="false" category-id="13" data-price="350" value="Chewy Brownies" class="dropdown-item">Chewy Brownies (&#8377; 350)</option>
                     </div>
                 </div>
 
@@ -123,313 +122,314 @@
             <!--items under CHICKEN category -->
             <div id="itemsUnderChicken" class="row mt-1 items chicken_items" style="display: none;">
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/chickenChowmein.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chicken Chowmein (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200"  class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chicken Chowmein (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/chickenGarlic.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Chicken Garlic (Rs. 200)
+
+                        <div isVar="false" category-id="2" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chicken Garlic (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="row d-flex add-item-div">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="3" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="row d-flex add-item-div">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="3" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/chickenChowmein.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chicken Chowmein (Rs. 200)
+                        <div isVar="false" category-id="5" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chicken Chowmein (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/chickenGarlic.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Chicken Garlic (Rs. 200)
+                        <div isVar="false" category-id="5" data-price="200"  class="col-9 col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chicken Garlic (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="6" data-price="200"  class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="7" data-price="200"  class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="8" data-price="200"  class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="9" data-price="200"  class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/chickenChowmein.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chicken Chowmein (Rs. 200)
+                        <div isVar="false" category-id="10" data-price="200"  class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chicken Chowmein (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/chickenGarlic.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Chicken Garlic (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200"  class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-texttext-muted">
+                            Chicken Garlic (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chickenChowmein.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chicken Chowmein (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chicken Chowmein (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chickenGarlic.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Chicken Garlic (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chicken Garlic (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chickenChowmein.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chicken Chowmein (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chickenGarlic.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Chicken Garlic (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
-                        <div class="col-sm-2 col-md-4 col-lg-4 p-0">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
+                    <div class="add-item-div row d-flex">
+                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
-                        <div class="col-sm-2 col-md-4 col-lg-4 p-0">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
+                    <div class="add-item-div row d-flex">
+                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
-                        <div class="col-sm-2 col-md-4 col-lg-4 p-0">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
+                    <div class="add-item-div row d-flex">
+                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
-                        <div class="col-sm-2 col-md-4 col-lg-4 p-0">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
+                    <div class="add-item-div row d-flex">
+                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-sm-10 col-md-8 col-lg-8 my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chickenChowmein.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chicken Chowmein (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chickenGarlic.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8  my-auto txt text-muted">
-                            Chicken Garlic (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
@@ -439,7 +439,7 @@
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
                         <div class="col-sm-10 col-md-8 col-lg-8  my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
@@ -449,27 +449,27 @@
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
                         <div class="col-sm-10 col-md-8 col-lg-8  my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
-                        <div class="col-sm-2 col-md-4 col-lg-4 p-0">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
+                    <div class="add-item-div row d-flex">
+                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-sm-10 col-md-8 col-lg-8  my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
-                        <div class="col-sm-2 col-md-4 col-lg-4 p-0">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
+                    <div class="add-item-div row d-flex">
+                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-sm-10 col-md-8 col-lg-8  my-auto txt text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Banana Juice (&#8377; 200)
                         </div>
                     </div>
                 </div>
@@ -477,59 +477,60 @@
 
 
             <!--items under DESERTS category-->
-            <div id="itemsUnderDeserts" class="row mt-1 items desert_items" style="display: none;">
+            <div id="itemsUnderDeserts" class="row mt-1 items desert_items add-item-div" style="display: none;">
                 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chewyBrowniesDesert.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chewy Brownies (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chewy Brownies (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chocolateCakeDesertr.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chocolate Cake Desert (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chocolate Cake Desert (&#8377; 200)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
+                    <div class="add-item-div row d-flex">
+                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
+                        </div>
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chocolate Cake Desert (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chickenChowmein.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chicken Chowmein (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chocolate Cake Desert (&#8377; 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chickenChowmein.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chicken Chowmein (Rs. 200)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
-                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chickenChowmein.jpeg" class="divImg">
-                        </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chicken Chowmein (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chocolate Cake Desert (&#8377; 200)
                         </div>
                     </div>
                 </div>
@@ -539,59 +540,60 @@
             <div id="itemsUnderBeverages" class="row mt-1 items beverage_items" style="display: none;">
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chewyBrowniesDesert.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chewy Brownies (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Chocolate Cake Desert (&#8377; 200)
                         </div>
                     </div>
                 </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
+                    <div class="add-item-div row d-flex">
+                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
+                        </div>
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Watermelon Lemonade (Rs. 200)
+                        </div>
+                    </div>
+                </div>
+                            
+ 
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/watermelonLemonadeBev.jpeg" class="divImg">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
                             Watermelon Lemonade (Rs. 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
-                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/chewyBrowniesDesert.jpeg" class="divImg">
-                        </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Chewy Brownies (Rs. 200)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
-                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
-                            <img src="assets/beetrootJuice.jpeg" class="divImg">
-                        </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Beetroot Juice (Rs. 200)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/bananaJuice.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Banana Juice (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Beetroot Juice (Rs. 200)
                         </div>
                     </div>
-                </div>
+                </div>          
+
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
+                    <div class="add-item-div row d-flex">
+                        <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
+                            <img src="assets/bananaJuice.jpeg" class="divImg">
+                        </div>
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Beetroot Juice (Rs. 200)
+                        </div>
+                    </div>
+                </div>         
 
             </div>
 
@@ -599,23 +601,23 @@
             <div id="itemsUnderJuices" class="row mt-1 items juice_items" style="display: none;">
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/mangoSmoothieBev.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                        <div  isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
                             Mango Smoothie (Rs. 200)
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card">
-                    <div class="row d-flex">
+                    <div class="add-item-div row d-flex">
                         <div class="col-3 col-sm-2 col-md-4 col-lg-4 p-0">
                             <img src="assets/pineappleSmoothieBev.jpeg" class="divImg">
                         </div>
-                        <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Pineapple Smoothie (Rs. 200)
+                        <div isVar="false" category-id="1" data-price="200" class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
+                            Pineapple Smoothie (&#8377; 200)
                         </div>
                     </div>
                 </div>
@@ -626,7 +628,7 @@
                             <img src="assets/strawberrySmoothieBev.jpeg" class="divImg">
                         </div>
                         <div class="col-9 col-sm-10 col-md-8 col-lg-8 my-auto txt card-text text-muted">
-                            Strawberry Smoothie (Rs. 200)
+                            Strawberry Smoothie (&#8377; 200)
                         </div>
                     </div>
                 </div>
@@ -780,12 +782,280 @@
 
 
         <!--===================================== RIGHT SECTION =====================================-->
-        <div class="col-md-5 me-0 pe-0 border border-primary">
-            <small>Arbaz's Section</small>
+        <div class="col-md-5 m-0 p-0">
+            <div class="bg-secondary-subtle">
+              <!--top menu-->
+              <div class="top-section">
+                <ul class="nav nav-fill nav-pills justify-content-around">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link border border-1 border-secondary-subtle"
+                      aria-current="page"
+                      href="#"
+                      >Delivery</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active border border-1 border-secondary-subtle"
+                      href="#"
+                      >Dine-in</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link border border-1 border-secondary-subtle"
+                      href="#"
+                      >Take-out</a
+                    >
+                  </li>
+                </ul>
+              </div>
+    
+              <!--Table content-->
+              <div class="table-container">
+                <table class="table table-secondary">
+                  <thead>
+                    <tr>
+                      <th scope="col">Item Name</th>
+                      <th scope="col">Qty.</th>
+                      <th scope="col">Rate</th>
+                      <th scope="col">Amount</th>
+                    </tr>
+                  </thead>
+    
+                  <tbody class="table-group-divider" id="addItemToTable">
+                    <!-- Dynamic Elements -->
+                  </tbody>
+                </table>
+              </div>
+    
+              <div
+                class="d-flex justify-content-between align-items-center flex-wrap"
+              >
+                <div class="d-flex">
+                  <div class="me-5">
+                    <strong>Bill</strong>
+                  </div>
+                  <div class="form-check form-check-inline billInputDiv">
+                    <input
+                      id="taxed"
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      value="option1"
+                      checked
+                    />
+                    <label class="form-check-label" for="inlineRadio1">Taxed</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      id="nonTaxed"
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >Estimate</label
+                    >
+                  </div>
+                </div>
+    
+                <div class="sec d-flex align-items-center serverDiv">
+                  <div class="me-2">
+                    <strong>Server</strong>
+                  </div>
+    
+                  <input
+                    class="form-control search server bg-light"
+                    type="search"
+                    placeholder="server name"
+                    aria-label="Search"
+                    class="search"
+                  />
+                </div>
+              </div>
+    
+              <hr />
+    
+              <!--bill section-->
+    
+              <div class="bill-section">
+                <table class="table table-secondary">
+                  <tbody class="subTotal">
+                    <tr>
+                      <th>Sub Total</th>
+                      <td id="totalQty"></td>
+                      <td class="totalAmount"></td>
+                    </tr>
+                  </tbody>
+                  <tbody class="CGST gst">
+                    <tr>
+                      <th>CGST @2.5%</th>
+                      <td class="totalAmount"></td>
+                      <td id="cgstAmount"></td>
+                    </tr>
+                  </tbody>
+                  <tbody class="SGST gst">
+                    <tr>
+                      <th>SGST @2.5%</th>
+                      <td class="totalAmount"></td>
+                      <td id="sgstAmount"></td>
+                    </tr>
+                  </tbody>
+                  <tbody id="discount">
+                    <tr>
+                      <th>Discount</th>
+                      <td>
+                        <div
+                          id="inputGroupP"
+                          class="input-group rounded-pill overflow-hidden border border-secondary-subtle border-2"
+                        >
+                          <input
+                            type="text"
+                            class="form-control bg-light border-0 rounded-start-pill"
+                            value="0"
+                            maxlength="3"
+                          />
+                          <span
+                            class="input-group-text bg-secondary text-white border-0 rounded-end-pill"
+                            >%</span
+                          >
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          id="inputGroupR"
+                          class="input-group border border-secondary-subtle border-2 rounded-pill overflow-hidden"
+                        >
+                          <span
+                            class="input-group-text bg-secondary rounded-start-pill border-0 text-white"
+                            >₹</span
+                          >
+                          <input
+                            type="text"
+                            class="form-control bg-light rounded-end-pill border-0 text-end"
+                            value="0"
+                          />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+    
+              <div class="bottom-section">
+                <div class="sharp-line"></div>
+    
+                <div class="d-flex justify-content-around p-2">
+                  <div class="strong">Gross Amount</div>
+                  <div id="grossTotal"></div>
+                </div>
+    
+                <div class="">
+                  <div class="btn-stream-1 d-flex">
+                    <button class="btn btn-success flex-fill border border-white">
+                      $ Pay
+                    </button>
+                    <button class="btn btn-primary flex-fill border border-white">
+                      Customer
+                    </button>
+                    <button class="btn btn-dark flex-fill border border-white">
+                      Table
+                    </button>
+                    <button
+                      class="btn btn-warning flex-fill border border-white text-white"
+                    >
+                      Comp.
+                    </button>
+                  </div>
+    
+                  <div class="text-area specialInstructions">
+                    <textarea
+                      type="text-area"
+                      class="form-control flex-fill border border-black border-2 bg-light"
+                      placeholder="Enter special remarks, if any"
+                      rows="1"
+                    ></textarea>
 
-
+                
+    
+                  <div class="btn-stream-2 d-flex">
+                    <button
+                      class="btn bg-info flex-fill border border-white text-color"
+                    >
+                      Save & ebill
+                    </button>
+                    <button class="btn btn-success flex-fill border border-white">
+                      Save & Print
+                    </button>
+                    <button
+                      class="btn btn-warning flex-fill border border-white text-white"
+                    >
+                      Save & KDT
+                    </button>
+                    <button
+                      class="btn bg-info flex-fill border border-white text-white"
+                    >
+                      Save
+                    </button>
+                    <button class="btn btn-danger flex-fill border border-white">
+                      Reset
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+
+        <!--modal on variants-->
+        <div class="modal fade" id="itemModal" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="d-flex justify-content-between btn-div" style="width: 60%;">
+                            <button class="btn btn-primary size">Half</button>
+                            <button class="btn btn-primary size">Full</button>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-div">
+                            <textarea
+                              type="text-area"
+                              class="form-control flex-fill border border-black border-1 bg-light"
+                              placeholder="Enter special remarks, if any"
+                              rows="1"
+                            ></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary" onClick="saveAll()">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script
+          src="https://kit.fontawesome.com/d14f6bc67a.js"
+          crossorigin="anonymous"
+        ></script>
+
+    <script src="script.js"></script>
 
 
 
