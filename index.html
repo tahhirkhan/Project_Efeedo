@@ -7,7 +7,7 @@
     <title>Project Efeedo</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -28,17 +28,17 @@
                 <div class="col dropdown">
                     <input type="text" autocomplete="off" id="dropdownInput" onkeyup="filterDropdownItems()"
                         class="form-control form-select" placeholder="Select an option...">
-                    <div class="dropdown-menu" id="dropdownMenu">   `
-                        <option isVar="false" category-id="1" data-price="200" value="Chicken Tikka (Full)" class="dropdown-item">Chicken Tikka Full (&#8377; 200)</option>
-                        <option isVar="false" category-id="2" data-price="250" value="Butter Chicken (Full)" class="dropdown-item">Butter Chicken Full (&#8377; 250)
+                    <div class="dropdown-menu search-menu-div" id="dropdownMenu">   `
+                        <option isVar="false" category-id="1" data-price="200" value="Chicken Tikka (Full)" class="dropdown-item search-menu-item">Chicken Tikka Full (&#8377; 200)</option>
+                        <option isVar="false" category-id="2" data-price="250" value="Butter Chicken (Full)" class="dropdown-item search-menu-item">Butter Chicken Full (&#8377; 250)
                         </option>
-                        <option isVar="false" category-id="3" data-price="230" value="Chicken Chilly Full" class="dropdown-item">Chicken Chilly Full (&#8377; 230)
+                        <option isVar="false" category-id="3" data-price="230" value="Chicken Chilly Full" class="dropdown-item search-menu-item">Chicken Chilly Full (&#8377; 230)
                         </option>
-                        <option isVar="false" category-id="4" data-price="200" value="Chicken Tikka (Half)" class="dropdown-item">Chicken Tikka (Half) (&#8377; 200)
+                        <option isVar="false" category-id="4" data-price="200" value="Chicken Tikka (Half)" class="dropdown-item search-menu-item">Chicken Tikka (Half) (&#8377; 200)
                         </option>
-                        <option isVar="false" category-id="5" data-price="150" value="Chicken Chilly Half" class="dropdown-item">Chicken Chilly Half (&#8377; 150)
+                        <option isVar="false" category-id="5" data-price="150" value="Chicken Chilly Half" class="dropdown-item search-menu-item">Chicken Chilly Half (&#8377; 150)
                         </option>
-                        <option isVar="false" category-id="6" data-price="350" value="Chicken Kanti Full" class="dropdown-item">Chicken Kanti Full (&#8377; 350)
+                        <option isVar="false" category-id="6" data-price="350" value="Chicken Kanti Full" class="dropdown-item search-menu-item">Chicken Kanti Full (&#8377; 350)
                         </option>
                         <option isVar="false" category-id="7" data-price="450" value="Chicken Kanti Half" class="dropdown-item">Chicken Kanti Half (&#8377; 450)
                         </option>
@@ -46,11 +46,11 @@
                         <option isVar="false" category-id="9" data-price="250" value="Chocolate Cake" class="dropdown-item">Chocolate Cake (&#8377; 250)</option>
                         <option isVar="false" category-id="10" data-price="450" value="Strawberry Cheesecake" class="dropdown-item">Strawberry Cheesecake (&#8377; 450)
                         </option>
-                        <option isVar="false" category-id="11" data-price="350" value="Chocolate Cheesecake" class="dropdown-item">Chocolate Cheesecake (&#8377; 350)
+                        <option isVar="false" category-id="11" data-price="350" value="Chocolate Cheesecake" class="dropdown-item search-menu-item">Chocolate Cheesecake (&#8377; 350)
                         </option>
-                        <option isVar="false" category-id="12" data-price="150" value="Chocolate Ice Cream" class="dropdown-item">Chocolate Ice Cream (&#8377; 150)
+                        <option isVar="false" category-id="12" data-price="150" value="Chocolate Ice Cream" class="dropdown-item search-menu-item">Chocolate Ice Cream (&#8377; 150)
                         </option>
-                        <option isVar="false" category-id="13" data-price="350" value="Chewy Brownies" class="dropdown-item">Chewy Brownies (&#8377; 350)</option>
+                        <option isVar="false" category-id="13" data-price="350" value="Chewy Brownies" class="dropdown-item search-menu-item">Chewy Brownies (&#8377; 350)</option>
                     </div>
                 </div>
 
@@ -782,6 +782,7 @@
 
 
         <!--===================================== RIGHT SECTION =====================================-->
+        
         <div class="col-md-5 m-0 p-0">
             <div class="bg-secondary-subtle">
               <!--top menu-->
@@ -954,116 +955,124 @@
                   <div class="strong">Gross Amount</div>
                   <div id="grossTotal"></div>
                 </div>
+
     
                 <div class="">
-                  <div class="btn-stream-1 d-flex">
-                    <button class="btn btn-success flex-fill border border-white">
-                      $ Pay
-                    </button>
-                    <button class="btn btn-primary flex-fill border border-white">
-                      Customer
-                    </button>
-                    <button class="btn btn-dark flex-fill border border-white">
-                      Table
-                    </button>
-                    <button
-                      class="btn btn-warning flex-fill border border-white text-white"
-                    >
-                      Comp.
-                    </button>
-                  </div>
-    
-                  <div class="text-area specialInstructions">
-                    <textarea
-                      type="text-area"
-                      class="form-control flex-fill border border-black border-2 bg-light"
-                      placeholder="Enter special remarks, if any"
-                      rows="1"
-                    ></textarea>
-
-                
-    
-                  <div class="btn-stream-2 d-flex">
-                    <button
-                      class="btn bg-info flex-fill border border-white text-color"
-                    >
-                      Save & ebill
-                    </button>
-                    <button class="btn btn-success flex-fill border border-white">
-                      Save & Print
-                    </button>
-                    <button
-                      class="btn btn-warning flex-fill border border-white text-white"
-                    >
-                      Save & KDT
-                    </button>
-                    <button
-                      class="btn bg-info flex-fill border border-white text-white"
-                    >
-                      Save
-                    </button>
-                    <button class="btn btn-danger flex-fill border border-white">
-                      Reset
-                    </button>
-                  </div>
+                    <div class="btn-stream-1 d-flex">
+                      <button
+                      id="pay-btn" 
+                      class="btn btn-success flex-fill border border-white" onclick="payment()" 
+                      >
+                        $ Pay
+                      </button>
+                      <button class="btn btn-primary flex-fill border border-white">
+                        Customer
+                      </button>
+                      <button class="btn btn-dark flex-fill border border-white">
+                        Table
+                      </button>
+                      <button
+                        class="btn btn-warning flex-fill border border-white text-white"
+                      >
+                        Comp.
+                      </button>
+                    </div>
+      
+                    <div class="text-area specialInstructions">
+                      <textarea
+                        type="text-area"
+                        class="form-control flex-fill border border-black border-2 bg-light"
+                        placeholder="Enter special remarks, if any"
+                        rows="1"
+                      ></textarea>
+  
+                  
+      
+                    <div class="btn-stream-2 d-flex">
+                      <button
+                        class="btn bg-info flex-fill border border-white text-color"
+                      >
+                        Save & ebill
+                      </button>
+                      <button class="btn btn-success flex-fill border border-white">
+                        Save & Print
+                      </button>
+                      <button
+                        class="btn btn-warning flex-fill border border-white text-white"
+                      >
+                        Save & KDT
+                      </button>
+                      <button
+                        class="btn bg-info flex-fill border border-white text-white"
+                      >
+                        Save
+                      </button>
+                      <button class="btn btn-danger flex-fill border border-white">
+                        Reset
+                      </button>
+                    </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!--modal on variants-->
-        <div class="modal fade" id="itemModal" >
+        <!--pay modal-->
+        <div class="modal fade" id="payModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <div class="d-flex justify-content-between btn-div" style="width: 60%;">
-                            <button class="btn btn-primary size">Half</button>
-                            <button class="btn btn-primary size">Full</button>
+                            <button id="pay-now" class="btn btn-primary active size">Pay now</button>
+                            <button id="pay-later" class="btn btn-primary size">Pay later</button>
                         </div>
+                        
+
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="text-div">
-                            <textarea
-                              type="text-area"
-                              class="form-control flex-fill border border-black border-1 bg-light"
-                              placeholder="Enter special remarks, if any"
-                              rows="1"
-                            ></textarea>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle payment-dropdown" data-bs-toggle="dropdown">Payment methods</button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                             <li><a class="dropdown-item payment-method" href="#">Cash</a></li>
+                             <li><a class="dropdown-item payment-method" href="#">UPI</a></li>
+                             <li><a class="dropdown-item payment-method" href="#">Mpay</a></li>
+                           </ul>
+                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                             Close
                         </button>
-                        <button type="button" class="btn btn-primary" onClick="saveAll()">
-                            Save
-                        </button>
+                        <form id="pay-form" method="post" action="order.php">
+                            <input type="hidden" name="order-data" id="order-data">
+                            
+                           <input type="submit" id="confirm" class="btn btn-primary">
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    
+        
+    
+
 <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-          crossorigin="anonymous"
-        ></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script
-          src="https://kit.fontawesome.com/d14f6bc67a.js"
-          crossorigin="anonymous"
-        ></script>
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"
+>
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+</script>
+<script src="https://kit.fontawesome.com/d14f6bc67a.js"
+rossorigin="anonymous">
+</script>
+        
+<script src="script.js"></script>
 
-    <script src="script.js"></script>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
-    <script src="script.js"></script>
 </body>
 
 </html>

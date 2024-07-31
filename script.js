@@ -227,23 +227,25 @@ const order = {
 };
 
 // when item is directly clicked at search bar
-document.querySelectorAll(".dropdown .dropdown-item").forEach((item) => {
-  item.addEventListener("click", function () {
-    const itemName = item.value;
+document
+  .querySelectorAll(".search-menu-div .search-menu-item")
+  .forEach((item) => {
+    item.addEventListener("click", function () {
+      const itemName = item.value;
 
-    const rate = parseFloat(item.getAttribute("data-price"));
+      const rate = parseFloat(item.getAttribute("data-price"));
 
-    const categoryId = item.getAttribute("category-id");
+      const categoryId = item.getAttribute("category-id");
 
-    const qty = 1; //default
+      const qty = 1; //default
 
-    let totalItemAmount = parseFloat(rate);
+      let totalItemAmount = parseFloat(rate);
 
-    const isVar = item.getAttribute("is-variant");
+      const isVar = item.getAttribute("is-variant");
 
-    addItem(categoryId, itemName, qty, rate, totalItemAmount, isVar);
+      addItem(categoryId, itemName, qty, rate, totalItemAmount, isVar);
+    });
   });
-});
 
 // when item is clicked at below
 document.querySelectorAll(".add-item-div").forEach((divItem) => {
@@ -439,7 +441,7 @@ function updateDiscountedPecent() {
 
   const discountedAmount = (percent.value / 100) * parseFloat(totalAmount);
 
-  order.discountedPercent = discountedPercent.toFixed(2) + "%";
+  order.discountedPercent = discountedPercent.toFixed(2);
   order.discountedAmount = parseFloat(discountedAmount.toFixed(2));
 
   discountedSubTotal = totalAmount - discountedAmount;
@@ -465,7 +467,7 @@ function updateDiscountedAmount() {
 
   order.discountedAmount = parseFloat(discountedAmount.toFixed(2));
 
-  order.discountedPercent = discountedPercent.toFixed(2) + "%";
+  order.discountedPercent = discountedPercent.toFixed(2);
 
   discountedSubTotal = totalAmount - discountedAmount;
 
@@ -557,22 +559,45 @@ document
     order.server = serverName.value;
   });
 
-//save model
-function saveAll() {
-  let size = "";
-  let instructions = "";
-  document.querySelectorAll(".btn-div .size").forEach((btn) => {
-    btn.addEventListener("click", function (event) {
-      size = event.target.value;
-      console.log(size);
-    });
-  });
+// document
+//   .querySelector(".text-div text-area")
+//   .addEventListener("input", function () {
+//     instructions = document.querySelector(".text-div text-area").value;
+//   });
+// console.log(size);
+// console.log(instructions);
 
-  // document
-  //   .querySelector(".text-div text-area")
-  //   .addEventListener("input", function () {
-  //     instructions = document.querySelector(".text-div text-area").value;
-  //   });
-  // console.log(size);
-  // console.log(instructions);
+//pay function
+function payment() {
+  if (Object.keys(order.items).length == 0) {
+    alert("Add to cart is empty");
+  } else {
+    $("#payModal").modal("show");
+    const payNow = document.getElementById("pay-now");
+    const payLater = document.getElementById("pay-later");
+
+    payNow.addEventListener("click", function () {
+      document.querySelector(".modal-body").style.display = "block";
+    });
+
+    payLater.addEventListener("click", function () {
+      document.querySelector(".modal-body").style.display = "none";
+      payNow.classList.remove("active");
+    });
+
+    //payment method
+    const paymentDropdownOpt = document.querySelector(".payment-dropdown");
+
+    document.querySelectorAll(".payment-method").forEach((paymentOption) => {
+      paymentOption.addEventListener("click", function () {
+        paymentDropdownOpt.innerText = paymentOption.innerText;
+      });
+    });
+
+    // when click on submit btn get order array
+    document.querySelector("#pay-form").addEventListener("submit", function () {
+      const orderInputData = document.querySelector("#order-data");
+      orderInputData.value = JSON.stringify(order);
+    });
+  }
 }
