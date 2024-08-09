@@ -241,9 +241,9 @@ document
 
       let totalItemAmount = parseFloat(rate);
 
-      const isVar = item.getAttribute("is-variant");
+      const itemInst = "";
 
-      addItem(categoryId, itemName, qty, rate, totalItemAmount, isVar);
+      addItem(categoryId, itemName, qty, rate, totalItemAmount, itemInst);
     });
   });
 
@@ -264,9 +264,9 @@ document.querySelectorAll(".add-item-div").forEach((divItem) => {
 
     const totalItemAmount = parseFloat(rate);
 
-    const isVar = divItem.querySelector(".card-text").getAttribute("is-Var");
+    const itemInst = "";
 
-    addItem(categoryId, itemName, qty, rate, totalItemAmount, isVar);
+    addItem(categoryId, itemName, qty, rate, totalItemAmount, itemInst);
   });
 });
 
@@ -277,60 +277,85 @@ let cgstAmount = 0;
 let sgstAmount = 0;
 let discountedSubTotal = totalAmount;
 
-function addItem(categoryId, itemName, qty, rate, totalItemAmount, isVar) {
+function incr_qty_and_amt(cat_id, rate) {
+  tr = document.getElementById(cat_id);
+  qty = tr.children[1].children[1];
+  qty.innerText = parseInt(qty.innerText) + 1;
+  quantity = qty.innerText;
+  console.log(tr);
+  item_amt = tr.children[3];
+  item_amt.innerText = parseFloat(item_amt.innerText) + parseFloat(rate);
+
+  //for order
+  order.totalQuantity += 1;
+  order.items[cat_id].qty += 1;
+  order.items[cat_id].totalItemAmount += parseFloat(rate);
+
+  totalQty += 1;
+  totalAmount += parseFloat(rate);
+
+  //update bill items
+  updateAmount(tr, quantity);
+}
+
+function addItem(categoryId, itemName, qty, rate, totalItemAmount, itemInst) {
   const table = document.querySelector("#addItemToTable");
 
-  // Create table row
-  const tableRow = document.createElement("tr");
+  if (categoryId in order.items) {
+    incr_qty_and_amt(categoryId, rate);
+  } else {
+    // Create table row
+    const tableRow = document.createElement("tr");
 
-  //set id to table row
-  tableRow.setAttribute("rowid", categoryId);
+    //set id to table row
+    tableRow.setAttribute("id", categoryId);
 
-  // Item name cell
-  const tableDataName = document.createElement("td");
-  tableDataName.innerHTML = `<a onclick="removeItem(this,${categoryId})" type='button'><i class="fa-solid fa-trash"></i></a> <span>${itemName}</span>`;
-  tableRow.appendChild(tableDataName);
+    // Item name cell
+    const tableDataName = document.createElement("td");
+    tableDataName.innerHTML = `<a onclick="removeItem(this,${categoryId})" type='button'><i class="fa-solid fa-trash"></i></a> <span>${itemName}</span>`;
+    tableRow.appendChild(tableDataName);
 
-  // Quantity cell
-  const tableDataQty = document.createElement("td");
-  tableDataQty.innerHTML = `<a type='button' onclick="decreaseQuantity(this,${categoryId},${rate})"><i class="fa-solid fa-circle-minus"></i></a> <span>${qty}</span> <a type='button' onclick="increaseQuantity(this,${categoryId},${rate})"><i class="fa-solid fa-circle-plus"></i></a>`;
-  tableRow.appendChild(tableDataQty);
+    // Quantity cell
+    const tableDataQty = document.createElement("td");
+    tableDataQty.innerHTML = `<a type='button' onclick="decreaseQuantity(this,${categoryId},${rate})"><i class="fa-solid fa-circle-minus"></i></a> <span "name"='qty'>${qty}</span> <a type='button' onclick="increaseQuantity(this,${categoryId},${rate})"><i class="fa-solid fa-circle-plus"></i></a>`;
+    tableRow.appendChild(tableDataQty);
 
-  // Rate cell
-  const tableDataRate = document.createElement("td");
-  tableDataRate.innerText = rate;
-  tableRow.appendChild(tableDataRate);
+    // Rate cell
+    const tableDataRate = document.createElement("td");
+    tableDataRate.setAttribute("rate", categoryId);
+    tableDataRate.innerText = rate;
+    tableRow.appendChild(tableDataRate);
 
-  // Amount cell
-  const tableDataAmount = document.createElement("td");
-  tableDataAmount.innerText = parseInt(qty) * parseInt(rate);
-  tableRow.appendChild(tableDataAmount);
+    // Amount cell
+    const tableDataAmount = document.createElement("td");
+    tableDataAmount.setAttribute("amt", categoryId);
+    tableDataAmount.innerText = parseInt(qty) * parseInt(rate);
+    tableRow.appendChild(tableDataAmount);
 
-  // Append row to table body
-  table.appendChild(tableRow);
+    // Append row to table body
+    table.appendChild(tableRow);
 
-  //update totalAmount
-  totalQty += qty;
-  totalAmount += qty * rate;
-  updateBillingTable();
+    //update totalAmount
+    totalQty += qty;
+    totalAmount += qty * rate;
+    updateBillingTable();
 
-  //adding items to json array
-  order.items[categoryId] = { itemName, qty, rate, totalItemAmount };
-  order.totalQuantity += 1;
+    //adding items to json array
+    order.items[categoryId] = {
+      itemName,
+      qty,
+      rate,
+      totalItemAmount,
+      itemInst,
+    };
+    order.totalQuantity += 1;
 
-  // type for order
-  order.type = "taxed";
+    // type for order
+    order.type = "taxed";
 
-  tableRow.addEventListener("click", function () {
-    showModal(categoryId, isVar);
-  });
-
-  // modal
-  function showModal(categoryId, isVar) {
-    if (isVar == "true") {
-      modelId = document.querySelector("#itemModel");
-      $("#itemModal").modal("show");
-    }
+    tableDataName.addEventListener("click", function () {
+      showItemModal(categoryId);
+    });
   }
 }
 
@@ -558,6 +583,24 @@ document
     let serverName = document.querySelector(".serverDiv .server");
     order.server = serverName.value;
   });
+
+// modal
+function showItemModal(cat_Id) {
+  const inst = document.querySelector(".itemInst textarea");
+  const newInst = inst.cloneNode(true);
+  inst.parentNode.replaceChild(newInst, inst);
+
+  newInst.value = order.items[cat_Id].itemInst || "";
+
+  // Attach new event listener
+  newInst.addEventListener("input", function () {
+    const val = newInst.value;
+    order.items[cat_Id].itemInst = val;
+  });
+
+  // Show the modal
+  $("#modalItem").modal("show");
+}
 
 // document
 //   .querySelector(".text-div text-area")

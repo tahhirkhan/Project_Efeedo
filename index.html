@@ -956,64 +956,68 @@
                   <div id="grossTotal"></div>
                 </div>
 
+                <div class="payment-btns col-5">
+                    <div class="btn-stream-1 d-flex ">
+                        <button
+                        id="pay-btn" 
+                        class="btn btn-success flex-fill border border-white" onclick="payment()" 
+                        >
+                          $ Pay
+                        </button>
+                        <button class="btn btn-primary flex-fill border border-white">
+                          Customer
+                        </button>
+                        <button class="btn btn-dark flex-fill border border-white">
+                          Table
+                        </button>
+                        <button
+                          class="btn btn-warning flex-fill border border-white text-white"
+                        >
+                          Comp.
+                        </button>
+                      </div>
+        
+                      <div class="text-area specialInstructions">
+                        <textarea
+                          type="text-area"
+                          class="form-control flex-fill border border-black border-2 bg-light"
+                          placeholder="Enter special remarks, if any"
+                          rows="1"
+                        ></textarea>
     
-                <div class="">
-                    <div class="btn-stream-1 d-flex">
-                      <button
-                      id="pay-btn" 
-                      class="btn btn-success flex-fill border border-white" onclick="payment()" 
-                      >
-                        $ Pay
-                      </button>
-                      <button class="btn btn-primary flex-fill border border-white">
-                        Customer
-                      </button>
-                      <button class="btn btn-dark flex-fill border border-white">
-                        Table
-                      </button>
-                      <button
-                        class="btn btn-warning flex-fill border border-white text-white"
-                      >
-                        Comp.
-                      </button>
-                    </div>
-      
-                    <div class="text-area specialInstructions">
-                      <textarea
-                        type="text-area"
-                        class="form-control flex-fill border border-black border-2 bg-light"
-                        placeholder="Enter special remarks, if any"
-                        rows="1"
-                      ></textarea>
-  
-                  
-      
-                    <div class="btn-stream-2 d-flex">
-                      <button
-                        class="btn bg-info flex-fill border border-white text-color"
-                      >
-                        Save & ebill
-                      </button>
-                      <button class="btn btn-success flex-fill border border-white">
-                        Save & Print
-                      </button>
-                      <button
-                        class="btn btn-warning flex-fill border border-white text-white"
-                      >
-                        Save & KDT
-                      </button>
-                      <button
-                        class="btn bg-info flex-fill border border-white text-white"
-                      >
-                        Save
-                      </button>
-                      <button class="btn btn-danger flex-fill border border-white">
-                        Reset
-                      </button>
-                    </div>
+                    
+        
+                      <div class="btn-stream-2 d-flex">
+                        <button
+                          class="btn bg-info flex-fill border border-white text-color"
+                        >
+                          Save & ebill
+                        </button>
+                        <button class="btn btn-success flex-fill border border-white">
+                          Save & Print
+                        </button>
+                        <button
+                          class="btn btn-warning flex-fill border border-white text-white"
+                        >
+                          Save & KDT
+                        </button>
+                        <button
+                          class="btn bg-info flex-fill border border-white text-white"
+                        >
+                          Save
+                        </button>
+                        <button class="btn btn-danger flex-fill border border-white">
+                          Reset
+                        </button>
+                  </div>
                 </div>
               </div>
-            </div>
+
+                </div>
+
+              </div>
+
+                    
           </div>
         </div>
 
@@ -1050,6 +1054,31 @@
                             
                            <input type="submit" id="confirm" class="btn btn-primary">
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--special inst model for item click-->
+        <div class="modal fade" id="modalItem">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        <h2></h2>
+                    </div>
+                    <div class="modal-body itemInst">
+                        <textarea
+                        id="1"
+                        type="text-area"
+                        class="form-control flex-fill border border-black border-2 bg-light"
+                        placeholder="Enter special remarks, if any"
+                        rows="1"
+                      ></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </div>
